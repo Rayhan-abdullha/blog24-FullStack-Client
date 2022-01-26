@@ -41,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://pure-coast-77675.herokuapp.com/api/"
+  "proxy": "https://pure-coast-77675.herokuapp.com/api/",
+  "devDependencies": {
+    "mini-css-extract-plugin": "2.4.5"
+  }
 }
