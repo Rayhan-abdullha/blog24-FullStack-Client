@@ -80,7 +80,7 @@ export default function Write() {
                 </div>
                 <div className="writeFormGroup">
                     <input type="file" id="fileInput" style={{display:"none"}} onChange={(e) => setFile(e.target.files[0])}/>
-                    <input className="writeInput" autoFocus={true} type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)}/>
+                    <input className="writeInput" autoFocus={true} type="text" placeholder="Enter blog title" onChange={(e) => setTitle(e.target.value)}/>
                 </div>
                 <div className="writeFormGroup">
                     <textarea className="writeInput writeText" type="text" placeholder="Tell your story . . ." onChange={(e) => setDesc(e.target.value)}></textarea>

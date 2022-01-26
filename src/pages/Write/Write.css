@@ -1,9 +1,6 @@
 .write {
   padding: 100px 0;
-  background-image: url("https://images.unsplash.com/photo-1502679726485-931beda67f88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat
+  background-color: #23173c
 }
 .catLabel {
   margin-bottom: 20px;
@@ -19,7 +16,7 @@ select#category {
   padding: 10px;
   color: #8a8a8a;
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 20px;
 }
 select#category:focus {
@@ -58,17 +55,24 @@ select#category:focus {
 }
 
 .writeInput {
-  font-size: 30px;
   border: none;
+  font-size: 30px;
+  border-radius: 10px;
   padding: 20px;
-  width: 70vw;
-  background: transparent;
+  width: 90%;
+  background: #008080;
   color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 20px;
 }
-
-.writeInput::placeholder {
-  color: rgb(189, 185, 185);
+.writeText::placeholder {
   font-weight: 400;
+}
+.writeInput::placeholder {
+  color: #dddddd;
+  font-weight: 400;
+  font-size: 24px
 }
 
 .writeInput:focus {
@@ -76,12 +80,12 @@ select#category:focus {
 }
 
 .writeText {
-  background: transparent;
-  width: 70vw;
+  background: #fff;
+  width: 90%;
   height: 50vh;
   font-family: inherit;
   font-size: 20px;
-  color: #fff;
+  color: black;
 }
 
 .writeSubmit {
@@ -130,5 +134,24 @@ select#category:focus {
     margin-left: 45px;
     width: 45vh;
   }
-  
+}
+
+@media screen and (max-width: 460px) {
+  select#category {
+    border: none;
+    padding: 5px 0px;
+    width: 21px;
+  }
+  .writeInput {
+    font-size: 20px;
+  }
+  .writeFormGroup {
+    margin-left: 30px;
+  }
+  .writeSubmit {
+    left: 30px;
+  }
+  .writeInput::placeholder {
+    font-size: 20px
+  }
 }

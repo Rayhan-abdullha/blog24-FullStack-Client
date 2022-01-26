@@ -2,12 +2,14 @@ import React, {useState, useEffect} from 'react'
 import "./Register.css"
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Spinner from '../../compontents/Spinner/Spinner';
 
 export default function Register() {
   const [userName, setUserName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState(false)
+  const [spinner, setSpinner] = useState(true)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -36,6 +38,13 @@ export default function Register() {
     } 
     
   } 
+
+  useEffect(() => {
+      setTimeout(() => {
+          setSpinner(false)
+      },500);
+  }, [])
+  
 
   return (
     <div className="register">
@@ -66,6 +75,9 @@ export default function Register() {
           <button className="registerButton">Register</button>
         </form>
       </div>
-  </div>
+      {
+        spinner && <Spinner/>
+      }
+  </div> 
   )
 }

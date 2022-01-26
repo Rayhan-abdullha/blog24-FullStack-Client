@@ -18,18 +18,34 @@
     width: 350px
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
+    .home {
+        flex-direction: column-reverse;
+    }
     .blogError {
-        width: 100%;
-        padding: 50px 30px 70px 30px;
+        padding: 50px 30px 70px -0px;
+        margin-right: 5px;
+    }
+    .blogError img {
+        margin-right: 150px
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .blogError img {
+        margin-right: 50px
     }
     .blogError h3 {
         display: none
     }
 }
-
-@media screen and (max-width: 1200px) {
-    .home {
-        flex-direction: column-reverse;
+@media screen and (max-width: 600px) {
+    .blogError img {
+        margin-right: 0px
     }
+    .blogError img {
+        width: 250px
+    }
+    
 }
+

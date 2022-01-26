@@ -64,9 +64,12 @@
     align-items: center;
     justify-content: center;
   }
-  
+  .sidebarSocial a {
+    color: #368285;
+    margin: 0 8px;
+}
   .sidebarIcon {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 10px;
   }
   

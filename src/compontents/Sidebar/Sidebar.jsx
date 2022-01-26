@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { FaFacebook, FaGithub, FaTwitter, FaSearch, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaTwitter, FaSearch, FaInstagram, FaYoutube } from 'react-icons/fa';
 import './Sidebar.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -36,10 +36,10 @@ export default function Sidebar() {
                 <div className="sidebarItem">
                     <span className="sidebarTitle">FOLLOW US</span>
                     <div className="sidebarSocial">
-                        <i className="sidebarIcon"><FaFacebook /></i>
-                        <i className="sidebarIcon"><FaGithub/></i>
-                        <i className="sidebarIcon"><FaTwitter /></i>
-                        <i className="sidebarIcon"><FaInstagram /></i>
+                        <a href="https://www.facebook.com/profile.php?id=100069345762386" target="_blank"><i className="sidebarIcon"><FaFacebook /></i></a>
+                        <a href="https://www.youtube.com/channel/UC1NRZYzaieER4nM18l6vAAQ" target="_blank"><i className="sidebarIcon"><FaYoutube/></i></a>
+                        <a href="" target="_blank"><i className="sidebarIcon"><FaTwitter /></i></a>
+                        <a href="" target="_blank"><i className="sidebarIcon"><FaInstagram /></i></a>
                     </div>
                 </div>
             </div>

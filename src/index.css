@@ -31,6 +31,7 @@ p {
     text-decoration-line: underline;
 }
 .footer {
+    border-top: 1px solid #282828;
     background-color:#23173c;
     text-align: center;
     color: #ebebeb;
@@ -50,6 +51,7 @@ p {
     width: 300px;
 }
 .contact {
+    background: #23173c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,20 +60,33 @@ p {
 }
 .contact h1{
     font-size: 28px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    color: #ebebeb;
 }
 .socialIcon {
     display: flex;
 }
 .topIcon {
     font-size: 40px;
-    margin: 0 30px;
-    color: #444;
+    margin: 0 25px;
+    color: #fff;
     cursor: pointer;
+    transition: .3s
 }
 .topIcon:hover {
-    color: #2980b9
+    color: #0ecef5;
+    transition: .3s
 }
 .errorMsg::placeholder {
     color: #ec1d1d!important;
+}
+
+@media screen and (max-width: 460px) {
+    .contact h1 {
+        font-size: 24px;        
+    }
+    .topIcon {
+        font-size: 40px;
+        margin: 0 15px;
+    }
 }

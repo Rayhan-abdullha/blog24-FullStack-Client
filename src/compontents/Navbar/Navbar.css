@@ -11,14 +11,15 @@
     text-transform: uppercase;
 }
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #2980b9;
+    color: #009195;
+    transition: .3s
 }
 a.navbar-brand {
     font-family: 'Varela Round';
     font-weight: 700;
 }
 nav.navbar.navbar-expand-lg.navbar-light.bg-white.sticky-top {
-    border-top: 5px solid #2980b9;
+    border-top: 5px solid #009195;
     padding: 15px 0;
     height: 90px;
 }
@@ -29,20 +30,22 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.sticky-top {
     cursor: pointer;
 }
 .singleMenu a {
-    background: #2980b9;
+    background: #009195;
     border-radius: 50px;
     padding: 7px 15px;
     text-decoration: none;
     color: #ececec;
+    transition: .3s;
 }
 .logout {
     margin-right: 20px;
-    color: #0063a5!important;
+    color: #009195!important;
     font-weight: 700;
     cursor: pointer;
 }
 .singleMenu a:hover {
-    background-color: #2980b9;
+    background-color: #067174;
+    transition: .3s;
 }
 .signInImg {
     width: 40px;
