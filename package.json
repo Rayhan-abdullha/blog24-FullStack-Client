@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": ""
+  "proxy": "https://pure-coast-77675.herokuapp.com/api/"
 }
