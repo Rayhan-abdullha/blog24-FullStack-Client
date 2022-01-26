@@ -1,0 +1,107 @@
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.55);
+    border-color: none;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #2980b9;
+}
+a.navbar-brand {
+    font-family: 'Varela Round';
+    font-weight: 700;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-white.sticky-top {
+    border-top: 5px solid #2980b9;
+    padding: 15px 0;
+    height: 90px;
+}
+.singleMenu {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.singleMenu a {
+    background: #2980b9;
+    border-radius: 50px;
+    padding: 7px 15px;
+    text-decoration: none;
+    color: #ececec;
+}
+.logout {
+    margin-right: 20px;
+    color: #0063a5!important;
+    font-weight: 700;
+    cursor: pointer;
+}
+.singleMenu a:hover {
+    background-color: #2980b9;
+}
+.signInImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.menuList li:last-child {
+    margin-right: 0;
+}
+.menuList {
+    display: flex;
+}
+li.nav-item.nav-link.profilePic {
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px 0px #84afcb;
+}
+
+span.navbar-toggler-icon.navReverse {
+    transform: rotate(90deg);
+    transition: .5s;
+}
+span.navbar-toggler-icon.navReverse2 {
+    transition: .5s;
+}
+
+.showWrapper2 {
+    background: #fff;
+    position: absolute;
+    transition: .7s;
+    z-index: 999;
+    overflow: hidden;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 0 0 20px 0
+}
+@media screen and (max-width: 992px) {
+    li.nav-item.nav-link.profilePic {
+        padding: 8px;
+    }
+    .showWrapper {
+        background: #fff;
+        position: absolute;
+        transition: .5s;
+        z-index: 999;
+        overflow: hidden;
+        top: -300px;
+        left: 0;
+        right: 0;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-white.sticky-top {
+        z-index: 999;
+    }
+    .logout {
+        margin-right: 0px;
+        color: #0063a5!important;
+    }
+}

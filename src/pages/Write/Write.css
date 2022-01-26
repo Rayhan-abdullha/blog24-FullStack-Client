@@ -1,0 +1,134 @@
+.write {
+  padding: 100px 0;
+  background-image: url("https://images.unsplash.com/photo-1502679726485-931beda67f88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat
+}
+.catLabel {
+  margin-bottom: 20px;
+}
+span.category {
+  font-size: 19px;
+  color: #bfb9b9;
+  padding-bottom: 20px
+}
+select#category {
+  border-radius: 7px;
+  border: 1px solid #dedede;
+  padding: 10px;
+  color: #8a8a8a;
+  margin-left: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+select#category:focus {
+  outline: none
+}
+.writeImg {
+  margin-left: 150px;
+  width: 50vh;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.writeForm {
+  position: relative;
+}
+
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.writeIcon {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+  background: transparent;
+  color: #fff;
+}
+
+.writeInput::placeholder {
+  color: rgb(189, 185, 185);
+  font-weight: 400;
+}
+
+.writeInput:focus {
+  outline-style: none;
+}
+
+.writeText {
+  background: transparent;
+  width: 70vw;
+  height: 50vh;
+  font-family: inherit;
+  font-size: 20px;
+  color: #fff;
+}
+
+.writeSubmit {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: white;
+  background-color: teal;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.writeSubmit2 {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: white;
+  background-color: teal;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .writeSubmit2 {
+    top: -330px;
+    left: 45px;
+  }
+  .writeSubmit {
+    top: -50px;
+    left: 45px;
+  }
+  .writeFormGroup {
+    margin-left: 50px;
+  }
+  .writeImg {
+    margin-left: 45px;
+    width: 45vh;
+  }
+  
+}

@@ -1,0 +1,35 @@
+.home {
+    display: flex;
+}
+
+.blogError {
+    flex: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.blogError h3 {
+    position: relative;
+    left: 270px;
+    top: -39px;
+    color: rgb(130 126 199);
+}
+.blogError img {
+    width: 350px
+}
+
+@media screen and (max-width: 992px) {
+    .blogError {
+        width: 100%;
+        padding: 50px 30px 70px 30px;
+    }
+    .blogError h3 {
+        display: none
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home {
+        flex-direction: column-reverse;
+    }
+}
