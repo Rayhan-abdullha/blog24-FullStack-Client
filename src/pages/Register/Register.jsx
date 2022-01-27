@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import "./Register.css"
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import Spinner from '../../compontents/Spinner/Spinner';
+import { axiosInstance } from '../../config';
 
 export default function Register() {
   const [userName, setUserName] = useState("")
@@ -16,7 +16,7 @@ export default function Register() {
     setError(false)
       if (password.length >= 6 && userName.length > 0 && email.length > 10) {
         try {
-          const res = await axios.post("/auth/register", {
+          const res = await axiosInstance.post("/auth/register", {
             userName,
             email,
             password,

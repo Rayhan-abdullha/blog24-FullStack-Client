@@ -1,10 +1,10 @@
 import React, {useState, useContext, useEffect} from 'react'
 import './SinglePost.css'
 import { useLocation } from 'react-router';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Contex';
 import Spinner from '../Spinner/Spinner';
+import { axiosInstance } from '../../config';
 
 export default function SinglePost() {
     const [singlePost, setSinglePost] = useState({});
@@ -17,7 +17,7 @@ export default function SinglePost() {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get("/posts/" + path);
+            const res = await axiosInstance.get("/posts/" + path);
             setSinglePost(res.data);
             setTitle(res.data.title)
             setDesc(res.data.desc)
@@ -29,7 +29,7 @@ export default function SinglePost() {
 
     const handleDelete = async () => {
         try {
-          await axios.delete(`/posts/${singlePost._id}`, {
+          await axiosInstance.delete(`/posts/${singlePost._id}`, {
             data: { userName: user.userName },
           });
           window.location.replace("/");
@@ -38,7 +38,7 @@ export default function SinglePost() {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`/posts/${singlePost._id}`, {
+            await axiosInstance.put(`/posts/${singlePost._id}`, {
               userName: user.userName, title, desc
             });
             setUpdateMode(false)

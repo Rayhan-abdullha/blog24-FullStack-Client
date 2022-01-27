@@ -1,10 +1,10 @@
 import React, {useContext, useState, useEffect} from 'react'
 import "./Profile.css";
 import { Context } from "../../context/Contex";
-import axios from "axios";
 import profilePic from '../../imgaes/profile.jpg'
 import { toast } from "react-toastify";
 import Spinner from '../../compontents/Spinner/Spinner';
+import { axiosInstance } from '../../config';
 
 export default function Profile() {
   const [file, setFile] = useState(null);
@@ -31,13 +31,13 @@ export default function Profile() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axiosInstance.post("/upload", data);
       } catch (err) {
         toast.error("Bad user Credential")
       }
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axiosInstance.put("/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
       toast.success("Update successfully done!")

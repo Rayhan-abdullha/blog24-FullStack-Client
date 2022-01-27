@@ -1,9 +1,9 @@
 import React, {useState, useContext, useEffect} from 'react';
 import './Write.css';
 import {Context} from '../../context/Contex';
-import axios from 'axios';
 import photo from '../../imgaes/profile.jpg'
 import Spinner from '../../compontents/Spinner/Spinner';
+import { axiosInstance } from '../../config';
 
 export default function Write() {
     const [title, setTitle] = useState("")
@@ -28,13 +28,13 @@ export default function Write() {
             data.append("file",file)
             newPost.photo = filename;
             try {
-                await axios.post("/upload", data);
+                await axiosInstance.post("/upload", data);
             } catch(err) {
 
             }
         }
         try {
-            const res = axios.post("/posts", newPost)
+            const res = axiosInstance.post("/posts", newPost)
             window.location.replace("/")
         }catch(err) {
             

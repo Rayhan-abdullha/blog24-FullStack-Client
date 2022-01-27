@@ -1,9 +1,9 @@
 import React,{useContext, useRef, useEffect, useState} from 'react'
 import "./LogIn.css";
 import { Context } from "../../context/Contex";
-import axios from "axios";
 import { toast } from 'react-toastify';
 import Spinner from '../../compontents/Spinner/Spinner';
+import { axiosInstance } from '../../config';
 
 export default function LogIn() {
   const userRef = useRef();
@@ -15,7 +15,7 @@ export default function LogIn() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/auth/login", {
+      const res = await axiosInstance.post("/auth/login", {
         userName: userRef.current.value,
         password: passwordRef.current.value,
       });
