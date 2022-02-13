@@ -33,16 +33,11 @@ export default function Home() {
             <Header/>
             <div className="home">
                 {post.length > 0 ? <Posts post={post}/> :
-                    <div className="blogError">
-                        <h3>No Blog Here</h3>
-                        <img src={notfound} alt="No blog post here"/>
-                    </div>
+                    <Spinner/>
                 }
                 <Sidebar/>
             </div>
-            {
-                spinner && <Spinner/>
-            }
+            
         </React.Fragment>
     )
 }

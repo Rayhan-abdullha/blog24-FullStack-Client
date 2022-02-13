@@ -2,50 +2,9 @@
     display: flex;
 }
 
-.blogError {
-    flex: 9;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-.blogError h3 {
-    position: relative;
-    left: 270px;
-    top: -39px;
-    color: rgb(130 126 199);
-}
-.blogError img {
-    width: 350px
-}
-
 @media screen and (max-width: 1200px) {
     .home {
         flex-direction: column-reverse;
     }
-    .blogError {
-        padding: 50px 30px 70px -0px;
-        margin-right: 5px;
-    }
-    .blogError img {
-        margin-right: 150px
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .blogError img {
-        margin-right: 50px
-    }
-    .blogError h3 {
-        display: none
-    }
-}
-@media screen and (max-width: 600px) {
-    .blogError img {
-        margin-right: 0px
-    }
-    .blogError img {
-        width: 250px
-    }
-    
 }
 
