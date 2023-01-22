@@ -1,41 +1,43 @@
-import React, {useState, useEffect} from 'react'
-import Header from '../../compontents/Header/Header';
-import Posts from '../../compontents/Posts/Posts';
-import Sidebar from '../../compontents/Sidebar/Sidebar';
-import './Home.css'
-import { useLocation } from 'react-router';
-import notfound from '../../imgaes/notFound.svg'
-import Spinner from '../../compontents/Spinner/Spinner';
+import React, {useState, useEffect, useContext} from 'react'
+import Header from '../../compontents/header/Header';
+import Posts from '../../compontents/posts/Posts';
+import './home.css'
 import { axiosInstance } from '../../config';
-
+import { Context } from '../../context/Contex';
+import Spinner from '../../compontents/spinner/Spinner';
+import Categories from '../../compontents/categories/Categories';
 export default function Home() {
-    const [post, setPost] = useState([])
-    const location = useLocation()
-    const {search} = location;
-    const [spinner, setSpinner] = useState(true)
+    const {dispatch, allPosts} = useContext(Context)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState("")
 
     useEffect(() => {
-        const fetchPost = async () => {
-            const res = await axiosInstance.get("/posts"+search)             
-            setPost(res.data);
+        if (allPosts.length === 0) {
+            const fetchPost = async () => {
+                try {
+                    setLoading(true)
+                    const res = await axiosInstance.get("/posts")             
+                    dispatch({type: "FETCH_POST", payload: res.data});
+                    setLoading(false)
+                    setError("")
+                } catch (e){
+                    setError("Somthing went wrong")
+                    setLoading(false);
+                }
+            }
+            fetchPost()
         }
-        fetchPost()
-    }, [search])
-
-    useEffect(() => {
-        setTimeout(() => {
-            setSpinner(false)
-        },500);
     }, [])
-    
     return (
         <React.Fragment>
             <Header/>
-            <div className="home">
-                {post.length > 0 ? <Posts post={post}/> :
-                    <Spinner/>
+            <div className="container home">
+                <h2 className='posts'>Read Posts</h2>
+                <p className='post_sub'>Enjoy all your favourite Blogs</p>
+                <Categories/>
+                {
+                    !loading ? <Posts/> : <Spinner/>
                 }
-                <Sidebar/>
             </div>
             
         </React.Fragment>

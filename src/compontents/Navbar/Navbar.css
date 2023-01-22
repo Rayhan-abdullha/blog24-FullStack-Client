@@ -6,45 +6,60 @@
     border-color: none;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,.55);
-    font-size: 18px;
-    text-transform: uppercase;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    color: #000;
+    font-size: 19px;
+    text-transform: capitalize;
+    letter-spacing: -.025em!important;
 }
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #009195;
+    color: #dc3545;
     transition: .3s
 }
-a.navbar-brand {
-    font-family: 'Varela Round';
+a.navbar-brand h3 {
     font-weight: 700;
+    font-style: italic;
+}
+span.logoB {
+    color: #dc3545;
 }
 nav.navbar.navbar-expand-lg.navbar-light.bg-white.sticky-top {
-    border-top: 5px solid #009195;
     padding: 15px 0;
     height: 90px;
+    border-bottom: 1px solid #ddd;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color:#dc3545;
+    font-weight: bold;
 }
 .singleMenu {
-    margin-right: 20px;
     font-size: 18px;
+    width: 100px;
     font-weight: 300;
     cursor: pointer;
+    background: black;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
 }
 .singleMenu a {
-    background: #009195;
+    text-align: center;
     border-radius: 50px;
-    padding: 7px 15px;
     text-decoration: none;
     color: #ececec;
     transition: .3s;
 }
 .logout {
     margin-right: 20px;
-    color: #009195!important;
     font-weight: 700;
     cursor: pointer;
 }
-.singleMenu a:hover {
-    background-color: #067174;
+.singleMenu:hover {
+    background-color: #dc3545;
     transition: .3s;
 }
 .signInImg {
@@ -54,11 +69,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-white.sticky-top {
     object-fit: cover;
     cursor: pointer;
 }
-.menuList li:last-child {
-    margin-right: 0;
-}
 .menuList {
     display: flex;
+    gap: 10px;
 }
 li.nav-item.nav-link.profilePic {
     border: 1px solid #e8e8e8;
@@ -105,6 +118,5 @@ span.navbar-toggler-icon.navReverse2 {
     }
     .logout {
         margin-right: 0px;
-        color: #0063a5!important;
     }
 }

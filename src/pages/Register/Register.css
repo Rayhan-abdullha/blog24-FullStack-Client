@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #23173c
+  background: #1d293a;
 }
 .registerWrapper {
   padding: 20px;
@@ -52,17 +52,19 @@
 .registerButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: #23173c;
+  background-color: #1d293a;
   color: white;
   padding: 10px;
   border: 1px solid #dee2e6;
   border-radius: 50px;
   text-align: center;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  transition: .3s;
 }
 .registerButton:hover {
-  background-color: #009195;
-  border: 1px solid #009195;
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  transition: .3s;
 }
 
 @media screen and (max-width: 400px) {

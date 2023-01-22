@@ -72,7 +72,6 @@
 .profilePPInput {
   width: 30%;
 }
-
 .profileForm > input {
   color: gray;
   margin-top: 10px;
@@ -80,8 +79,8 @@
   height: 30px;
   border: none;
   border-bottom: 1px solid lightgray;
+  outline: 0;
 }
-
 .profileSubmitButton {
   align-self: center;
   width: 150px;
@@ -96,13 +95,55 @@
   align-items: center;
   justify-content: center;
 }
-
 .profileSubmitButton:hover {
   background-color: rgb(1, 114, 114);
 }
-
 .profileUpdateTitle {
   font-size: 30px;
   margin-bottom: 20px;
-  color: lightcoral;
+  color: #dc3545;
+  font-weight: 500;
+}
+button.singlePostBtn {
+  border: none;
+  margin-top: 20px;
+  padding: 10px 0;
+  transition: .5s;
+}
+button.singlePostBtn:hover {
+  background-color: #dc3545;
+  color: #fff;
+  transition: .5s;
+}
+
+/* .dashbordPost */
+.container.postDashbord {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.dashbordPost {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashbordPost p {
+  margin: 0;
+}
+.editBtn button:hover {
+  background: #c63400;
+  color: #fff;
+  transition: .5s;
+}
+.editBtn button {
+  border: 0;
+  margin-left: 5px;
+  transition: .5s;
+}
+.editBtn button:last-child {
+  background: #dc3545;
+  color: #fff;
 }

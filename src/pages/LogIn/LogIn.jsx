@@ -1,15 +1,13 @@
-import React,{useContext, useRef, useEffect, useState} from 'react'
-import "./LogIn.css";
+import React,{useContext, useRef} from 'react'
+import "./logIn.css";
 import { Context } from "../../context/Contex";
 import { toast } from 'react-toastify';
-import Spinner from '../../compontents/Spinner/Spinner';
 import { axiosInstance } from '../../config';
 
 export default function LogIn() {
   const userRef = useRef();
   const passwordRef = useRef();
-  const { dispatch, isFetching } = useContext(Context);
-  const [spinner, setSpinner] = useState(true)
+  const { dispatch } = useContext(Context);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,12 +24,6 @@ export default function LogIn() {
       toast.error("Something went to wrong")
     }
   };
-
-  useEffect(() => {
-      setTimeout(() => {
-          setSpinner(false)
-      },500);
-  }, [])
 
   return (
     <div className="login">
@@ -52,12 +44,9 @@ export default function LogIn() {
             placeholder="Enter your password..." 
             ref={passwordRef}
             />
-          <button className="loginButton" disabled={isFetching}>Login</button>
+          <button className="loginButton">Login</button>
         </form>
       </div>
-      {
-        spinner && <Spinner/>
-      }
     </div>
   );
 }

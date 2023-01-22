@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0
 }
 body {
-    font-family: 'Varela Round'
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 ul {
     margin: 0;
     padding: 0
 }
 ul li {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     list-style: none
 }
 p {
-    line-height: 24x;
+    font-family: 'Arimo', sans-serif;
+    line-height: 24px;
     font-size: 18px;
 }
 .notFound {
@@ -32,13 +34,16 @@ p {
 }
 .footer {
     border-top: 1px solid #282828;
-    background-color:#23173c;
+    background-color: #151515;
     text-align: center;
     color: #ebebeb;
-    padding: 50px 0
+    padding: 50px 0;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 .footer p {
-    font-family: 'Varela Round';
     font-size: 18px;
     margin-bottom: 0
 }
@@ -51,7 +56,7 @@ p {
     width: 300px;
 }
 .contact {
-    background: #23173c;
+    background: #1d293a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +85,19 @@ p {
 .errorMsg::placeholder {
     color: #ec1d1d!important;
 }
+.notPosts {
+    margin: auto;
+}
 
+@media screen and (max-width: 460px) {
+    .contact h1 {
+        font-size: 24px;        
+    }
+    .topIcon {
+        font-size: 40px;
+        margin: 0 15px;
+    }
+}
 @media screen and (max-width: 460px) {
     .contact h1 {
         font-size: 24px;        

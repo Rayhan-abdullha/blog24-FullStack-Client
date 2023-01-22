@@ -1,0 +1,30 @@
+.container.singlePost {
+    padding-bottom: 200px;
+}
+p.authorName.mt-4 {
+    font-weight: 500;
+}
+span.singlePostAuthor {
+    text-transform: capitalize;
+    color: #dc3545;
+    font-weight: 400;
+}
+.description p {
+    line-height: 28px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.post_img img {
+    border-radius: 5px;
+}
+@media screen and (min-width: 792px) {
+    .post_img img {
+        height: 400px;
+    }
+}
+@media screen and (max-width: 792px) {
+    .post_img img {
+        width: 100%;
+        max-height: 250px;
+    }
+}

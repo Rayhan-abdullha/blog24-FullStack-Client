@@ -1,157 +1,78 @@
-.write {
-  padding: 100px 0;
-  background-color: #23173c
+.post-section {
+    height: 100vh;
+    max-width: 600px;
+    margin: auto
 }
-.catLabel {
-  margin-bottom: 20px;
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
-span.category {
-  font-size: 19px;
-  color: #bfb9b9;
-  padding-bottom: 20px
+.wrapper {
+    padding: 20px;
+    font-family: 'Arimo', sans-serif;
+    background: #1d293a;
+    border-radius: 5px;
+    margin: 0 15px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.categorySelect p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0;
 }
 select#category {
-  border-radius: 7px;
-  border: 1px solid #dedede;
-  padding: 10px;
-  color: #8a8a8a;
-  margin-left: 10px;
-  font-size: 15px;
-  margin-bottom: 20px;
+    outline: 0;
+    background: #6c757d;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
-select#category:focus {
-  outline: none
+input#title {
+    border: 0;
+    padding: 20px;
+    outline: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
-.writeImg {
-  margin-left: 150px;
-  width: 50vh;
-  height: 250px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 20px;
+textarea#description {
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    padding: 20px;
+}  
+.addImg {
+    color: #fff;
+    border: 1px solid #4e4e4eed;
+    padding: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    overflow: hidden;
 }
-
-.writeForm {
-  position: relative;
+.postInput {
+    display: flex;
+    flex-direction: column;
 }
-
-.writeFormGroup {
-  margin-left: 150px;
-  display: flex;
-  align-items: center;
-}
-
-.writeIcon {
-  width: 25px;
-  height: 25px;
-  font-size: 20px;
-  border: 1px solid;
-  border-radius: 50%;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.writeInput {
-  border: none;
-  font-size: 30px;
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  background: #008080;
-  color: #fff;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin-top: 20px;
-}
-.writeText::placeholder {
-  font-weight: 400;
-}
-.writeInput::placeholder {
-  color: #dddddd;
-  font-weight: 400;
-  font-size: 24px
-}
-
-.writeInput:focus {
-  outline-style: none;
-}
-
-.writeText {
-  background: #fff;
-  width: 90%;
-  height: 50vh;
-  font-family: inherit;
-  font-size: 20px;
-  color: black;
-}
-
-.writeSubmit {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  color: white;
-  background-color: teal;
-  padding: 8px 30px;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.writeSubmit2 {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  color: white;
-  background-color: teal;
-  padding: 8px 30px;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-
-@media screen and (max-width: 768px) {
-  .writeSubmit2 {
-    top: -330px;
-    left: 45px;
-  }
-  .writeSubmit {
-    top: -50px;
-    left: 45px;
-  }
-  .writeFormGroup {
-    margin-left: 50px;
-  }
-  .writeImg {
-    margin-left: 45px;
-    width: 45vh;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  select#category {
+input.postAvator {
+    float: right;
+    background:#dc3545;
     border: none;
-    padding: 5px 0px;
-    width: 21px;
-  }
-  .writeInput {
-    font-size: 20px;
-  }
-  .writeFormGroup {
-    margin-left: 30px;
-  }
-  .writeSubmit {
-    left: 30px;
-  }
-  .writeInput::placeholder {
-    font-size: 20px
-  }
+    outline: 0;
+    width: 100%;
+}
+button.submitBtn {
+    width: 100%;
+    padding: 7px 0;
+    background: #6c757d;
+    border: none;
+    margin-top: 20px;
+    color: #fff;
+}
+button.submitBtn:hover {
+    background-color: #647e94;
 }

@@ -1,0 +1,30 @@
+h2.posts {
+    overflow: hidden;
+    margin-top: 50px;
+}
+.tabList {
+    margin: 40px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+ul.tabList a {
+    text-decoration: none;
+    background: black;
+    padding: 5px 20px;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+ul.tabList a:hover {
+    background-color: #dc3545;
+}
+@media screen and (max-width: 792px) {
+    .tabList {
+        margin-top: -25px;
+        margin-bottom: 30px
+    }
+    .post_sub {
+        margin-bottom: 60px;
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaGithub, FaTwitter, FaSearch, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 export default function Contact() {
     return (
         <div className="contact">
@@ -11,11 +11,11 @@ export default function Contact() {
                 <a href="https://github.com/Rayhan-abdullha" target="_blank">
                     <i className="topIcon"><FaGithub/></i>
                 </a>
-                <a href="" target="_blank">
+                <a href="https://twitter.com/rayhan_abdullha" target="_blank">
                      <i className="topIcon"><FaTwitter /></i>
                 </a>
-                <a href="" target="_blank">
-                    <i className="topIcon"><FaInstagram /></i>
+                <a href="https://www.linkedin.com/in/rayhan-abdullah-100956189/" target="_blank">
+                    <i className="topIcon"><FaLinkedin /></i>
                 </a>
             </div>
         </div>

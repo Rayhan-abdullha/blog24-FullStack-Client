@@ -2,16 +2,16 @@
     flex: 9;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 40px;
     margin-top: 20px;
-    padding: 25px;
 }
 @media screen and (max-width: 1400px) {
     .posts {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 650px) {
     .posts {
         grid-template-columns: 1fr;
     }

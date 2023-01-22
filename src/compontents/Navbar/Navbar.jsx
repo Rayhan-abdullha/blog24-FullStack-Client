@@ -2,14 +2,14 @@ import React, {useContext, useState, useEffect} from "react"
 import { Link } from "react-router-dom";
 import demoProfilePic from '../../imgaes/profile.jpg'
 import { Context } from "../../context/Contex";
-import './Navbar.css'
+import './navbar.css'
 import { toast } from "react-toastify";
 
 export default function Navbar() {
     const [show, setShow] = useState(true)
     const {user, dispatch} = useContext(Context);
 
-    const PF = "https://pure-coast-77675.herokuapp.com/images/";
+    const PF = "https://blog24-server-app.onrender.com/images/";
     const handleLogOut = () => {
         dispatch({type:"LOGOUT"})
         toast.success("Logout")
@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div className="container">
-                <Link to="/" className="navbar-brand">BLOG-24</Link>
+                <Link to="/" className="navbar-brand"><h3><span className="logoB">B</span>LOG-24</h3></Link>
                 <button onClick={() => setShow((prev) => !prev)} className="navbar-toggler" type="button">
                 {show ? (<span className="navbar-toggler-icon navReverse2"></span>) :
                     (<span className="navbar-toggler-icon navReverse"></span>)
@@ -49,18 +49,18 @@ export default function Navbar() {
                         </li>
                         {
                             user && <li className="nav-item" onClick={showButton}>
-                                <Link onClick={handleLogOut} to="/login" className="logout nav-link">{user && "LOGOUT"}</Link>
+                                <Link onClick={handleLogOut} to="/login" className="logout nav-link">{user && "Logout"}</Link>
                             </li>
                         }
                         <li className={`nav-item nav-link ${user && "profilePic"}`}>
                             {
                             user ? <Link to="/profile" onClick={showButton}>
                             <img className="signInImg"
-                            src={user.profilePic ? (PF + user.profilePic) : demoProfilePic} alt="profile"/>
+                            src={user.profilePic ? (PF + user.profilePic) : demoProfilePic} alt=""/>
                             </Link>
                             : <div className="menuList">
-                                <li className="singleMenu" onClick={showButton}><Link to="/login">LOGIN</Link></li>
-                                <li className="singleMenu" onClick={showButton}><Link to="/register">REGISTER</Link></li>
+                                <li className="singleMenu" onClick={showButton}><Link to="/login">Login</Link></li>
+                                <li className="singleMenu" onClick={showButton}><Link to="/register">SignUp</Link></li>
                             </div>
                             }
                         </li>

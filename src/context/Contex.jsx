@@ -2,9 +2,11 @@ import { createContext, useReducer, useEffect } from "react";
 import Reducer from "./Reducer";
 
 const INITIAL_STATE = {
+    postData: [],
+    categorie: [],
     user: JSON.parse(localStorage.getItem("user")) || null,
     isFetching: false,
-    error: false
+    error: false,
 }
 
 export const Context = createContext(INITIAL_STATE)
@@ -19,7 +21,9 @@ export const ContextProvider = ({children}) => {
         user: state.user, 
         isFetching: state.isFetching, 
         error: state.error, 
-        dispatch
+        allPosts: state.postData,
+        categorie: state.categorie,
+        dispatch,
     }}>
         {children}
     </Context.Provider>
