@@ -13,7 +13,7 @@ export default function SinglePost() {
 
   const PF = "https://blog24-server-app.onrender.com/images/";
   useEffect(() => {
-    let find = allPosts.find((post) => (post._id || post.id) === path);
+    let find = allPosts.find((post) => (post._id || post.newId) === path);
     setSinglePost(find);
   }, [path]);
   return (

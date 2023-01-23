@@ -15,12 +15,12 @@ export default function Write() {
   const [file, setFile] = useState(null);
   const [selected, setSelected] = useState("others");
 
-  const { dispatch, user } = useContext(Context);
+  const { dispatch, user, allPosts } = useContext(Context);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = {
-      id: shortid.generate(),
+      newId: shortid.generate(),
       userName: user.userName,
       title,
       desc,
@@ -42,12 +42,17 @@ export default function Write() {
       }
     }
     try {
-      await axiosInstance.post("/posts", newPost);
       await dispatch({ type: "ADD_POST", payload: newPost });
-      toast.success("successfully post done!");
       navigate("/");
+      await axiosInstance.post("/posts", newPost);
+      toast.success("successfully post done!");
     } catch (err) {
       toast.error("Credential error");
+      const allData = allPosts.filter(
+        (post) => post._id !== newPost.newId
+      );
+      dispatch({ type: "FETCH_POST", payload: allData });
+      navigate("/write");
     }
   };
   const handleChange = (e) => {
@@ -88,7 +93,6 @@ export default function Write() {
             ></textarea>
           </div>
           <div className="addImg">
-            {/* <span>Add to your post</span> */}
             <input
               type="file"
               className="postAvator"

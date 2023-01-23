@@ -4,8 +4,6 @@ import { useLocation } from "react-router";
 import { useContext } from "react";
 import { Context } from "../../context/Contex";
 import { queryTransform } from "../../utils/utils";
-import NotFound from "../../pages/notFound/NotFound";
-
 export default function Posts() {
   const { isFetching, allPosts } = useContext(Context);
   const location = useLocation();
@@ -27,9 +25,12 @@ export default function Posts() {
       {post.length !== 0 ? (
         post.map((posts) => <Post key={posts._id} post={posts} />)
       ) : isFetching ? (
-        <h4>Empty! There Have No Posts!!</h4>
+        <h4 className="empty_post">Empty! There Have No Posts!!</h4>
       ) : (
-        <NotFound />
+        <div className="networkIssue">
+          <p className="d-block">Network Issues!</p>
+          <p className="d-block">Please Reload!</p>
+        </div>
       )}
     </div>
   );

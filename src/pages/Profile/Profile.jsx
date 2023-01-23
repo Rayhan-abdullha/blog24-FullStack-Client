@@ -1,10 +1,11 @@
 import React from "react";
-import UserPost from "../../compontents/UserPosts/UserPost";
+import UserDashbord from "../../compontents/UserDashbord/userDashbord";
+
 import ProfileInfo from "./ProfileInfo";
 const Profile = () => {
   return <>
     <ProfileInfo/>
-    {/* <UserPost/> */}
+    <UserDashbord/>
   </>;
 };
 

@@ -1,0 +1,30 @@
+.container.dashboard {
+  padding: 0px 40px;
+}
+.empty_dashbord p {
+    background: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    color: red;
+}
+.container.postDashbord {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.dashbordPost {
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: aliceblue;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.dashbordPost:last-child {
+  margin-bottom: 0px;
+}
+.dashbordPost p {
+  margin: 0;
+}

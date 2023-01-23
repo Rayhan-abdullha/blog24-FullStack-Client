@@ -42,9 +42,6 @@ export default function Navbar() {
                             <Link to="/write" className="nav-link">Write</Link>
                         </li>
                         <li className="nav-item" onClick={showButton}>
-                            <Link to="/about" className="nav-link">About</Link>
-                        </li>
-                        <li className="nav-item" onClick={showButton}>
                             <Link to="/contact" className="nav-link">Contact</Link>
                         </li>
                         {

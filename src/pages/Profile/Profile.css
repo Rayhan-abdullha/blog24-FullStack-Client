@@ -1,6 +1,5 @@
 .profile {
-  padding: 100px 20px;
-  height: 80vh;
+  padding: 75px 20px 50px 20px;
 }
 
 .profileWrapper {
@@ -116,23 +115,6 @@ button.singlePostBtn:hover {
   transition: .5s;
 }
 
-/* .dashbordPost */
-.container.postDashbord {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 50px;
-}
-.dashbordPost {
-  border: 1px solid #ddd;
-  padding: 5px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.dashbordPost p {
-  margin: 0;
-}
 .editBtn button:hover {
   background: #c63400;
   color: #fff;

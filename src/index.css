@@ -88,7 +88,26 @@ p {
 .notPosts {
     margin: auto;
 }
-
+.networkIssue {
+    padding: 50px 0;
+}
+.networkIssue p {
+    font-size: 22px;
+    color: red;
+    background: aliceblue;
+    padding: 20px;
+}
+.loading_spinner {
+    margin: 50px 0;
+}
+.loading_spinner button {
+    margin-right: 3px;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #f8f9fa;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
 @media screen and (max-width: 460px) {
     .contact h1 {
         font-size: 24px;        
