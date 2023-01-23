@@ -45,7 +45,7 @@ const UserDashbord = () => {
             <div key={post._id} className="dashbordPost">
               <p>{post.title}</p>
               <div className="editBtn">
-                <button onClick={() => setUpdateMode(prev => !prev)}>Edit</button>
+                {/* <button onClick={() => setUpdateMode(prev => !prev)}>Edit</button> */}
                 <button onClick={() => handleDelete(post._id ? (post._id) : (post.newId))}>Del</button>
               </div>
             </div>
